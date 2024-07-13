@@ -29,7 +29,7 @@ const Component3 = () => {
 
         <div className='flex items-center justify-center px-52'>
             {cardData.map((item, index) => (
-                <div className='flex  flex-col relative items-center justify-start px-10 gap-3'>
+                <div key={index} className='flex  flex-col relative items-center justify-start px-10 gap-3'>
                     <Image
                         src={item.image}
                         className='w-[18rem]'
