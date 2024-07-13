@@ -18,7 +18,7 @@ const desc4 = "In a unique experience, attendees will have the chance to see art
 const Component2 = () => {
   return (
     <div className='w-full max-h-fit bg-white flex'>
-        <div className='w-[50%]  h-[60rem]'>
+        <div className='w-[50%] h-[60rem]'>
             {/* top */}
             <div className='bg-aqua font-sans w-full h-[15rem] flex items-center justify-center gap-5 py-20 px-10'>
                 <p className='text-white text-nowrap text-5xl'>

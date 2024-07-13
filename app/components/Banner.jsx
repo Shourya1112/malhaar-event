@@ -7,7 +7,7 @@ const Banner = () => {
     <div className='w-full relative flex items-center justify-center overflow-hidden h-[calc(100vh-9.25rem)]'>
         <Image
             src={bannerImg}
-            className='w-full h-full '
+            className='w-full h-full'
             alt='banner'
         />
 
