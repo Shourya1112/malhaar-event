@@ -12,6 +12,31 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontFamily: {
+        sans: ['Pathway Gothic One', 'sans-serif'],
+      },
+      colors: {
+        'off-white': "#e8e8e8",
+        'aqua': "#39D7D7",
+        "pink": "#E81AB0"
+      },
+      animation: {
+        "slide-in": "aurora 300ms linear",
+       
+      },
+      keyframes: {
+        aurora: {
+          from: {
+            right: "calc(-10rem)",
+            opacity: 0.5,
+          },
+          to: {
+            left: null,
+            right: "100%",
+            opacity: 1
+          },
+        }
+      }
     },
   },
   plugins: [],
