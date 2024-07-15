@@ -32,7 +32,7 @@ const NavMenu = () => {
     <div className='bg-[#171717] animate-slide-in -z-10 flex flex-col items-center justify-between w-[18rem] h-[calc(100vh-9.25rem)] absolute bottom-0 right-[100%] py-8'>
         <div className='w-full h-fit flex flex-col items-start justify-start py-24 px-10 gap-4'>
             {navItems.map((item, id) => (
-                <Link href={item.link}
+                <Link key={id} href={item.link}
                     className='text-5xl text-off-white font-sans hover:text-pink font-extrabold'
                 >
                     {item.name}
@@ -42,6 +42,7 @@ const NavMenu = () => {
         <div className='w-full flex items-center justify-center gap-4'>
             {socialLinks.map((item,id) => (
                 <Link
+                    key={id}
                     href={item.link}
                     className='text-pink text-2xl text-opacity-60 hover:text-opacity-100' 
                 >
