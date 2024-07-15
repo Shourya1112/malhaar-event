@@ -15,7 +15,7 @@ const Component7 = () => {
 
         <div className='w-[50%]'>
             <h1 className='text-pink uppercase mb-10 font-sans font-bold text-7xl'>
-                Time's Running Out!
+                Time&apos;s Running Out!
             </h1>
             <p className='text-xl font-extralight text-black text-opacity-70'>
                 {description}

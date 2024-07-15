@@ -99,7 +99,7 @@ const LineUp = () => {
 
         <div className='w-full p-20 flex items-center justify-start gap-[4rem] flex-wrap'>
             {eventGuests[selectedDay].guests.map((item, id) => (
-                <div className='w-[calc(25%-3rem)] h-[26rem]'>
+                <div key={id} className='w-[calc(25%-3rem)] h-[26rem]'>
                     <div className='w-full mb-8 aspect-square relative border-black border-r-4 border-b-4'>
                         <div className='w-full absolute top-[-1rem] left-[-1rem] aspect-square overflow-hidden '>
                             <Image
