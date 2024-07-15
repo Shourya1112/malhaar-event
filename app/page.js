@@ -6,6 +6,9 @@ import Component2 from "./components/Component2";
 import Component3 from "./components/Component3";
 import Component4 from "./components/Component4";
 import Component5 from "./components/Component5";
+import Component6 from "./components/Component6";
+import Component7 from "./components/Component7";
+import LineUp from "./components/LineUp";
 
 export default function Home() {
   return (
@@ -21,6 +24,9 @@ export default function Home() {
         <Component3 />
         <Component4 />
         <Component5 />
+        <Component6 />
+        <Component7 />
+        <LineUp />
         <Footer />
       </div>
     </main>

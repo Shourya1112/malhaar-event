@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const withMT = require("@material-tailwind/react/utils/withMT");
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -11,6 +13,9 @@ module.exports = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
+      boxShadow: {
+        'inset-custom': 'inset 0px 0px 300px 0px rgba(0, 0, 0, 1)',
       },
       fontFamily: {
         sans: ['Pathway Gothic One', 'sans-serif'],

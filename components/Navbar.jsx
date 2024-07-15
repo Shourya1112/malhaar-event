@@ -1,6 +1,10 @@
+'use client'
+
 import Image from "next/image"
 import malhaarLogo from "../public/logos/malhaarLogo.png"
 import Link from "next/link"
+import { useState } from "react"
+import NavMenu from "./NavMenu"
 
 const links = [
     {
@@ -14,7 +18,8 @@ const links = [
 ]
 
 const Navbar = () => {
-    
+    const [ isNavMenuVisible, setIsNavMenuVisible ] = useState(false)
+
   return (
     <div className="h-[9.25rem] w-full bg-white px-14 flex items-center justify-between">
         <button
@@ -34,10 +39,14 @@ const Navbar = () => {
                 </Link>
             ))}
 
-            <button className="uppercase ml-4 font-sans text-3xl text-black font-bold py-3 px-6 bg-aqua">
+            <button 
+                className="uppercase ml-4 font-sans text-3xl text-black font-bold py-3 px-6 bg-aqua"
+            >
                 TICKETS
             </button>
         </div>
+
+        
     </div>
   )
 }

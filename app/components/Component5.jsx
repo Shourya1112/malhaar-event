@@ -100,10 +100,10 @@ const eventTimeline = [
 
 
 const Component5 = () => {
-    const [ selectedDay, setSelectedDay ] = useState(eventTimeline[0])
+    const [ selectedDay, setSelectedDay ] = useState(0)
 
   return (
-    <div className='w-full bg-off-white py-16'>
+    <div className='w-full bg-[#F4F4F3] py-16'>
         <div className='w-full flex justify-end px-20 h-fit'>
             <Image
                 src={ticketBg}
@@ -120,8 +120,8 @@ const Component5 = () => {
                 {[1,2,3].map((item, id) => (
                 <button 
                     key={id}
-                    onClick={() => setSelectedDay(eventTimeline[id])}
-                    className='py-3 px-6 bg-aqua text-3xl font-bold font-sans text-black'
+                    onClick={() => setSelectedDay(id)}
+                    className={` ${(selectedDay === id)? "bg-aqua" : "bg-off-white"} py-3 uppercase px-6 text-3xl font-bold font-sans text-black`}
                 >
                     DAY {item}
                 </button>))}
@@ -129,14 +129,14 @@ const Component5 = () => {
         </div>
 
         <div className='w-full px-32 py-10'>
-            {selectedDay.events.map((item, id) => (
+            {eventTimeline[selectedDay].events.map((item, id) => (
                 <div 
                     key={id} 
-                    className={`w-full flex h-40 py-5 border-black border-b-2 ${id === selectedDay.events.length-1 && "border-b-0"}`}
+                    className={`w-full flex h-40 py-5 border-black border-b-2 ${id === eventTimeline[selectedDay].events.length-1 && "border-b-0"}`}
                 >
                     <div className='flex flex-col w-[15%] border-r-2 border-black'>
                         <p className='text-pink mb-3 text-2xl text-wrap pr-4 font-sans font-bold'>
-                            {selectedDay.date}
+                            {eventTimeline[selectedDay].date}
                         </p>
                         <p className='text-black text-opacity-70'>
                             {item.time}
